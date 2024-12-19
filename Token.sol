@@ -39,4 +39,9 @@ contract Token{
     function currSupply()public view returns (uint){
         return totalSupply;
     }
+    //burn
+    function burn(uint _amount) public{
+        require(balances[msg.sender]>=_amount,"No sufficient balance");
+        balances[msg.sender]-=_amount;
+    }
 }
