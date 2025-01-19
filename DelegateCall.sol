@@ -17,10 +17,22 @@ contract Storage{
     }
 }
 //logic contract
-contract Implementation{
+contract Implementation1{
     uint public num;
     function setNum(uint _num)public{
         num=_num;
 
+    }
+}
+contract Implementation2{
+    uint public num;
+    function setNum(uint _num)public{
+        num=_num*2;
+    }
+}
+contract Implementation3{
+    uint public num;
+    function setNum(uint _num)public{
+        num=_num*3;
     }
 }
