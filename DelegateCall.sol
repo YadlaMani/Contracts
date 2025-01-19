@@ -12,6 +12,9 @@ contract Storage{
         (bool sucess,)=implementation.delegatecall(abi.encodeWithSignature("setNum(uint256)", _num));
         require(sucess,"Error while delegating call");
     }
+    function setImplementation(address _implementation)public{
+        implementation=_implementation;
+    }
 }
 //logic contract
 contract Implementation{
